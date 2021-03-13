@@ -11,12 +11,16 @@ The Pix2Pix GAN has been demonstrated on a range of image-to-image translation t
 # Satellite to Map Image Translation Dataset
 
 This is a dataset comprised of satellite images of New York and their corresponding Google maps pages. The image translation problem involves converting satellite photos to Google maps format, or the reverse, Google maps images to Satellite photos.
-(Download MAo Dataset)[http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz]
+
+[Download Map Dataset](http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz)
 
 Download the dataset and unzip it into your current working directory. This will create a directory called “maps” with the following structure:
 
+
 maps
+|
 ├── train
+|
 └── val
 
 The train folder contains 1,097 images, whereas the validation dataset contains 1,099 images.
@@ -33,7 +37,7 @@ The **Generator** model is more complex than the discriminator model.
 
 The **Generator** is an encoder-decoder model using a U-Net architecture. The model takes a source image (e.g. satellite photo) and generates a target image (e.g. Google maps image). It does this by first downsampling or encoding the input image down to a bottleneck layer, then upsampling or decoding the bottleneck representation to the size of the output image. The U-Net architecture means that skip-connections are added between the encoding layers and the corresponding decoding layers, forming a U-shape.
 
-!()[https://machinelearningmastery.com/wp-content/uploads/2019/05/Architecture-of-the-U-Net-Generator-Model-1.png]
+![](https://machinelearningmastery.com/wp-content/uploads/2019/05/Architecture-of-the-U-Net-Generator-Model-1.png)
 
 # Image Augmentation
 The Data Augmentation is done using Albumentations Library.Albumentations provides a single interface to work with different computer vision tasks such as classification, semantic segmentation, instance segmentation, object detection, pose estimation, etc.
@@ -54,6 +58,7 @@ The reason this library gained popularity in a small period of time is because o
 ![](assets/x.png)
 
 **Target Image**
+
 ![](assets/y.png)
 
 
