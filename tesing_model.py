@@ -12,7 +12,7 @@ opt_gen = optim.Adam(gen.parameters(),lr= config.LEARNING_RATE,betas=(0.5,0.999)
 load_checkpoint(config.CHECKPOINT_GEN,gen,opt_gen,config.LEARNING_RATE)
 
 # Input Image
-image_path = "1.jpg"
+image_path = "assets/1.jpg"
 input_image = np.array(Image.open(image_path))
 augmentation = config.test_only(image=input_image)["image"]
 augmentation = torch.unsqueeze(augmentation,0).to(config.DEVICE)
