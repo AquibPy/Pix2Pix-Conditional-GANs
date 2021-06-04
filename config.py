@@ -38,3 +38,13 @@ transform_only_mask = A.Compose(
         ToTensorV2(),
     ]
 )
+
+test_only = A.Compose(
+    [
+        A.Resize(width=256,height=256),
+        A.HorizontalFlip(p=0.5),
+        A.ColorJitter(p=0.2),
+        A.Normalize(mean=[0.5,0.5,0.5],std=[0.5,0.5,0.5],max_pixel_value=255.0),
+        ToTensorV2(),
+    ]
+)
