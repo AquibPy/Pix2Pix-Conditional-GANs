@@ -1,3 +1,6 @@
 data/
 evaluation/
+myWeights/
+images/
+__pycache__/
 **.tar
