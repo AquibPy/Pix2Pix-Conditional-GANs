@@ -108,7 +108,7 @@ Now go to <a href="http://127.0.0.1:8000/docs" class="external-link" target="_bl
 
 You will see the automatic interactive API documentation (provided by <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>):
 
-![Swagger UI](Assets/swagger.PNG)
+![Swagger UI](assets/swagger.PNG)
 
 ### Alternative API docs
 
@@ -116,7 +116,8 @@ And now, go to <a href="http://127.0.0.1:8000/redoc" class="external-link" targe
 
 You will see the alternative automatic documentation (provided by <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>):
 
-![ReDoc](Assets/redoc.PNG)
+![ReDoc](assets/redoc.PNG)
+
 
 
 
