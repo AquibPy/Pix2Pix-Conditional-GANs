@@ -1,9 +1,6 @@
 import shutil
-from io import BytesIO
 import os
 import uvicorn
-import numpy as np
-from PIL import Image
 from fastapi import FastAPI,File,UploadFile
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -27,9 +24,9 @@ def index():
     return {"GAN": 'This Model Generate satellite images into google map'}
 
 
-@app.post('/uplaodfile/')
-async def create_upload_file(file:UploadFile = File(...)):
-    with open(os.path.join(f"images/input/",file.filename),'wb+') as buffer:
+@app.post("/uploadfile/")
+async def create_upload_file(file: UploadFile = File(...)):
+    with open(os.path.join(f"images/input/", file.filename), 'wb+') as buffer:
         shutil.copyfileobj(file.file, buffer)
     input_file_path = f"images/input/{file.filename}"
     output_file_name = generate_image(input_file_path)
