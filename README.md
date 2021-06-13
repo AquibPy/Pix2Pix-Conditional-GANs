@@ -1,4 +1,4 @@
-# Pix2Pix using PyTorch
+# Pix2Pix using PyTorch<img src="https://pytorch.org/assets/images/pytorch-logo.png" width=50 height=50>
 
 The Pix2Pix Generative Adversarial Network, or GAN, is an approach to training a deep convolutional neural network for image-to-image translation tasks.The GAN architecture is comprised of a generator model for outputting new plausible synthetic images, and a discriminator model that classifies images as real (from the dataset) or fake (generated). The discriminator model is updated directly, whereas the generator model is updated via the discriminator model. As such, the two models are trained simultaneously in an adversarial process where the generator seeks to better fool the discriminator and the discriminator seeks to better identify the counterfeit images.
 
@@ -50,6 +50,77 @@ The reason this library gained popularity in a small period of time is because o
 * Variety: This library not only contains the common image manipulation techniques but a wide variety of image transforms. This is helpful for the task and domain-specific applications.
 
 * Flexibility: Because this package is fairly new, there are multiple image transformations that are proposed and the package has to undergo these changes. But, albumentation has proven to be quite flexible in research and is easily adaptable to the changes. 
+
+# Front End
+
+The Front-end is written in **Streamlit.**
+![](https://aws1.discourse-cdn.com/business7/uploads/streamlit/original/2X/8/8cb5b6c0e1fe4e4ebfd30b769204c0d30c332fec.png)
+
+### what is Streamlit?
+
+In brief, this is the library that allows us to build frontend for our machine learning and data science apps by writing all the code in Python. Beautiful UIs can easily be designed through numerous components from the library.
+This means you can have — buttons, pretty text displays, scrollable boxes, drop-down lists, file upload functionalities — all inside of your python project with minimal effort.
+
+### UI
+
+![UI](assets/streamlit.PNG)
+
+## To run the web app,First run api using this command
+```console
+uvicorn api_main:app --reload
+```
+and then run this command
+```console
+streamlit run streamlit_deploy.py
+```
+# Back End
+
+<p align="center">
+  <a href="https://fastapi.tiangolo.com"><img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI"></a>
+</p>
+<p align="center">
+    <em>FastAPI framework, high performance, easy to learn, fast to code, ready for production</em>
+
+---
+
+**Documentation**: <a href="https://fastapi.tiangolo.com" target="_blank">https://fastapi.tiangolo.com</a>
+
+---
+
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
+
+The key features are:
+
+* **Fast**: Very high performance, on par with **NodeJS** and **Go** (thanks to Starlette and Pydantic). [One of the fastest Python frameworks available](#performance).
+
+* **Fast to code**: Increase the speed to develop features by about 200% to 300%.
+* **Fewer bugs**: Reduce about 40% of human (developer) induced errors.
+* **Intuitive**: Great editor support. <abbr title="also known as auto-complete, autocompletion, IntelliSense">Completion</abbr> everywhere. Less time debugging.
+* **Easy**: Designed to be easy to use and learn. Less time reading docs.
+* **Short**: Minimize code duplication. Multiple features from each parameter declaration. Fewer bugs.
+* **Robust**: Get production-ready code. With automatic interactive documentation.
+* **Standards-based**: Based on (and fully compatible with) the open standards for APIs: <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> (previously known as Swagger) and <a href="https://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
+
+
+### Interactive API docs
+
+Now go to <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>.
+
+You will see the automatic interactive API documentation (provided by <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>):
+
+![Swagger UI](Assets/swagger.PNG)
+
+### Alternative API docs
+
+And now, go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>.
+
+You will see the alternative automatic documentation (provided by <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>):
+
+![ReDoc](Assets/redoc.PNG)
+
+
+
+
 
 **Result of Image Augmentation on the dataset**
 
