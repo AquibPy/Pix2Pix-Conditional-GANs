@@ -6,12 +6,21 @@ import numpy as np
 from PIL import Image
 from fastapi import FastAPI,File,UploadFile
 from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
 from helper import generate_image
 
 app = FastAPI()
 
-def load_image_into_numpy_array(data):
-    return np.array(Image.open(BytesIO(data)))
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# def load_image_into_numpy_array(data):
+#     return np.array(Image.open(BytesIO(data)))
 
 @app.get('/')
 def index():
